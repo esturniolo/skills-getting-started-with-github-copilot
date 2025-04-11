@@ -154,3 +154,34 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+.participant-info {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f1f8e9;
+}
+
+.participant-info h4 {
+  margin-bottom: 10px;
+  color: #388e3c;
+}
+
+.participant-info p {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.participant-info ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: square;
+  color: #444;
+}
+
+.participant-info ul li {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
