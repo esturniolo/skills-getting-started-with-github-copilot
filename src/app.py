@@ -52,6 +52,7 @@ activities = {
         "participants": ["ava@mergington.edu", "mia@mergington.edu"]
     },
     "Art Club": {
+
         "description": "Explore various art techniques and create masterpieces",
         "schedule": "Mondays, 3:30 PM - 5:00 PM",
         "max_participants": 15,
@@ -101,7 +102,9 @@ def signup_for_activity(activity_name: str, email: str):
 
     # Get the specificy activity
     activity = activities[activity_name]
-
+# Validate student is not already signed up
+    if email in activity["participants"]:
+        raise HTTPException(status_code=400, detail="Already signed up for this activity")
     # Add student
     activity["participants"].append(email)
     return {"message": f"Signed up {email} for {activity_name}"}
